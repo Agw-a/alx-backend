@@ -14,14 +14,14 @@ class LIFOCache(BaseCaching):
         self.data = []
 
     def put(self, key, item):
-        '''Insert cache data using the LIFO method
+        '''Insert cache data using the LIFO policy
         '''
 
         if key is None or item is None:
             return
 
         if len(self.cache_data) >= self.MAX_ITEMS:
-            Discard = self.queue.pop()
+            Discard = self.data.pop()
             print('DISCARD: {}'.format(Discard))
             del self.cache_data[Discard]
 
