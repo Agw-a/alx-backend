@@ -22,7 +22,7 @@ class LRUCache(BaseCaching):
             return
 
         if len(self.cache_data) >= self.MAX_ITEMS:
-            Discard = self.queue.pop(0)
+            Discard = self.data.pop(0)
             print('DISCARD: {}'.format(Discard))
             del self.cache_data[Discard]
 
@@ -30,7 +30,7 @@ class LRUCache(BaseCaching):
         self.cache_data[key] = item
 
     def get(self, key):
-        '''Returns the data linked to a key
+        '''Returns data linked to a key
         '''
 
         if key is None or key not in self.cache_data:
