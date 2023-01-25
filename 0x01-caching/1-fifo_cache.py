@@ -20,7 +20,7 @@ class FIFOCache(BaseCaching):
         if key is None or item is None:
             return
 
-        if len(self.cac) >= self.MAX_ITEMS:
+        if len(self.cache_data) >= self.MAX_ITEMS:
             Discard = self.data.pop(0)
             print("DISCARD: {}".format(Discard))
             del self.cache_data[Discard]
