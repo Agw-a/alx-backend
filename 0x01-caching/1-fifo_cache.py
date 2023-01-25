@@ -7,6 +7,7 @@ from base_caching import BaseCaching
 class FIFOCache(BaseCaching):
     '''Represents FIFO rempving mechanism
     '''
+
     def __init__(self):
         '''call parent cache init
         '''
@@ -20,9 +21,9 @@ class FIFOCache(BaseCaching):
             return
 
         if len(self.cac) >= self.MAX_ITEMS:
-            discard = self.data.pop(0)
-            print("DISCARD: {}".format(discard))
-            del self.cache_data[discard]
+            Discard = self.data.pop(0)
+            print("DISCARD: {}".format(Discard))
+            del self.cache_data[Discard]
 
         self.data.append(key)
         self.cache_data[key] = item
