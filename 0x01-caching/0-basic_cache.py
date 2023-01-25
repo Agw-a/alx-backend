@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-'''Basic caching
+'''Basic caching module
 '''
 from base_caching import BaseCaching
 
 
-class BasicCache():
+class BasicCache(BaseCaching):
     '''inherits from BaseCaching
     '''
     def put(self, key, item):
