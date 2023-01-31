@@ -279,10 +279,10 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: templates/3-index.html:7
-msgid "home_title"
-msgstr "Welcome to Holberton"
+msgid "Welcome to Holberton"
+msgstr ""
 
 #: templates/3-index.html:10
-msgid "home_header"
-msgstr "Hello world!"
+msgid "Hello world!"
+msgstr ""
 
