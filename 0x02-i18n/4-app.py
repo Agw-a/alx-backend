@@ -24,14 +24,7 @@ app.config.from_object(Config)
 def get_locale():
     '''get locale from webpage
     '''
-    cues = request.query_string.decode('utf-8').split('&')
-    cue = dict(map(
-        lambda x: (x if '=' in x else '{}='.format(x)).split('='),
-        cues,
-    ))
-    if 'locale' in cue:
-        if cue['locale'] in app.config["LANGUAGES"]:
-            return cue['locale']
+
     return request.accept_languages.best_match(app.config["LANGUAGES"])
 
 
